@@ -445,21 +445,6 @@ Segment tree / BIT problems are a Google-distinctive category rarely seen at oth
 
 > **2025-2026 Trends**: The **AI-enabled coding interview is now part of the standard SWE loop**: one of the two coding rounds is replaced by an AI-assisted round on CoderPad with an AI chat panel (choice of models, typically Claude/Opus tiers). The AI **cannot edit code directly**: you paste and verify. Graded on a **4-point scale where 3 passes**, relative to other candidates; interviewers score whether you direct and verify the AI (prompt -> review -> run -> confirm), not whether you can avoid it. **Follow-ups are the real bar**: after working code, questioning pivots to concurrency/thread safety (most common), scaling behavior, malformed input, and production readiness. That's where candidates struggle. Loop: screening (often LC medium + SQL for some roles) -> onsite of 2 coding (1 AI-enabled) + system design + "craftsmanship" (code quality/engineering practices) + hiring manager. Staff loops: 3 DSA (up to LC Hard) + 2 system design + managerial. LinkedIn's classic tagged set still dominates, now wrapped with AI-era production follow-ups.
 
-### LinkedIn Data Structure Design
-
-| No. | Question | Difficulty |
-| --- | -------- | ---------- |
-| 1 | [Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum) | Medium |
-| 2 | [Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii) | Medium |
-| 3 | [Max Stack](https://leetcode.com/problems/max-stack) | Hard |
-| 4 | [All O'one Data Structure](https://leetcode.com/problems/all-oone-data-structure) | Hard |
-| 5 | [Shortest Word Distance II](https://leetcode.com/problems/shortest-word-distance-ii) | Medium |
-| 6 | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure) | Medium |
-| 7 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1) | Medium |
-| 8 | [LFU Cache](https://leetcode.com/problems/lfu-cache) (confirmed in AI-enabled round, eviction ranking with LRU tiebreaker) | Hard |
-| 9 | [Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed) | Hard |
-| 10 | [Design Authentication Manager](https://leetcode.com/problems/design-authentication-manager) | Medium |
-| 11 | [Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst) | Medium |
 
 ### LinkedIn Trees and Graphs
 
@@ -468,9 +453,8 @@ Segment tree / BIT problems are a Google-distinctive category rarely seen at oth
 | 1 | [Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree) | Medium |
 | 2 | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity) | Medium |
 | 3 | [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | Medium |
-| 4 | [Word Ladder](https://leetcode.com/problems/word-ladder) | Hard |
-| 5 | [Generate Random Point in a Circle](https://leetcode.com/problems/generate-random-point-in-a-circle) | Medium |
-| 6 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | Medium |
+| 4 | [Generate Random Point in a Circle](https://leetcode.com/problems/generate-random-point-in-a-circle) | Medium |
+| 5 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | Medium |
 
 ### LinkedIn Arrays and DP
 
@@ -483,11 +467,30 @@ Segment tree / BIT problems are a Google-distinctive category rarely seen at oth
 | 5 | [Decode Ways](https://leetcode.com/problems/decode-ways) | Medium |
 | 6 | [House Robber II](https://leetcode.com/problems/house-robber-ii) | Medium |
 | 7 | [Merge Intervals](https://leetcode.com/problems/merge-intervals) | Medium |
-| 8 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings) | Easy |
-| 9 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii) | Medium |
-| 10 | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii) | Medium |
-| 11 | [Paint House III](https://leetcode.com/problems/paint-house-iii) | Hard |
-| 12 | [Allocate Mailboxes](https://leetcode.com/problems/allocate-mailboxes) | Hard |
-| 13 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square) | Easy |
-| 14 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy |
-| 15 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) | Easy |
+| 8 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii) | Medium |
+| 9 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square) | Easy |
+| 10 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) | Easy |
+
+## OpenAI
+
+> **2025-2026 Trends**: Production over puzzles. Problems drawn from a fixed bank of ~8 core challenges with progressive difficulty layers, and the bank churns (Dependency Version Finder is a new entrant). Python strongly recommended. Coding bar is non-negotiable. Interviewers expect you to "fly through" problems, candidates report typing the whole 60 minutes. **New in 2026**: (1) **Agentic coding round (beta)**: you get an existing codebase and must add features scoped "too large and complex to tackle by hand," so you are *expected* to drive an AI coding agent. This is the **only live round** where AI use is permitted, every other interview strictly prohibits it. (The take-home is the one other carve-out, and only for Applied AI roles; see below.) Not all candidates get it while in beta. (2) The 48-hour take-home is now widely reported as a **paid work trial (~$1,000)** under NDA, scoped for ~3-6 hours of work and graded like a senior engineer's PR review, **"missing test coverage" is the single most-cited rejection reason**, and a design doc explaining tradeoffs is expected. AI tooling is allowed for Applied AI roles, restricted for Core Infra/Research. (3) Official candidate guide published: final loop is 4-6 hours with 4-6 people over 1-2 days; engineering criteria are explicitly "well-designed solutions, high-quality code, optimal performance, good test coverage." Loop = 2 coding + 1 system design + behavioral + hiring manager, plus a 45-min project presentation round (deep defense of a personal project). System design interviewers push 10x/100x/1000x scaling, fault tolerance, and idempotency.
+
+
+**Progressive layers reported in 2026**: *Resumable Iterator* now runs up to 6 parts (lists -> multi-file with empty files -> async/coroutines -> 2D -> 3D iterators). *CD Directory Navigation* adds `~` home-dir handling and symlink resolution with cycle detection. *GPU Credit Allocation* uses half-open intervals `[start, expiration)`, consumes soonest-expiring first (heap/queue), and must answer balance queries at an arbitrary timestamp.
+
+### OpenAI LeetCode-Equivalent Problems
+
+| No. | Question | Difficulty | Context |
+| --- | -------- | ---------- | ------- |
+| 1 | [LRU Cache](https://leetcode.com/problems/lru-cache) | Medium | Inference KV cache -- most frequently reported |
+| 2 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store) | Medium | Model checkpoint storage |
+| 3 | [Snapshot Array](https://leetcode.com/problems/snapshot-array) | Medium | Model state checkpointing |
+| 4 | [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded) | Medium | Training data crawling |
+| 5 | [Design Memory Allocator](https://leetcode.com/problems/design-memory-allocator) | Medium | GPU memory management |
+| 6 | [Game of Life](https://leetcode.com/problems/game-of-life) | Medium | Extended to infinite board |
+| 7 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii) | Medium | Interval scheduling |
+| 8 | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings) | Medium | Serialization family |
+| 9 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree) | Hard | Data persistence |
+| 10 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements) | Medium | ML preprocessing |
+| 11 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii) | Medium | Dependency resolution |
+| 12 | [Decode String](https://leetcode.com/problems/decode-string) | Medium | String processing |
