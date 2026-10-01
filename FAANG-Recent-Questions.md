@@ -473,7 +473,7 @@ Segment tree / BIT problems are a Google-distinctive category rarely seen at oth
 
 ## OpenAI
 
-> **2025-2026 Trends**: Production over puzzles. Problems drawn from a fixed bank of ~8 core challenges with progressive difficulty layers, and the bank churns (Dependency Version Finder is a new entrant). Python strongly recommended. Coding bar is non-negotiable. Interviewers expect you to "fly through" problems, candidates report typing the whole 60 minutes. **New in 2026**: (1) **Agentic coding round (beta)**: you get an existing codebase and must add features scoped "too large and complex to tackle by hand," so you are *expected* to drive an AI coding agent. This is the **only live round** where AI use is permitted, every other interview strictly prohibits it. (The take-home is the one other carve-out, and only for Applied AI roles; see below.) Not all candidates get it while in beta. (2) The 48-hour take-home is now widely reported as a **paid work trial (~$1,000)** under NDA, scoped for ~3-6 hours of work and graded like a senior engineer's PR review, **"missing test coverage" is the single most-cited rejection reason**, and a design doc explaining tradeoffs is expected. AI tooling is allowed for Applied AI roles, restricted for Core Infra/Research. (3) Official candidate guide published: final loop is 4-6 hours with 4-6 people over 1-2 days; engineering criteria are explicitly "well-designed solutions, high-quality code, optimal performance, good test coverage." Loop = 2 coding + 1 system design + behavioral + hiring manager, plus a 45-min project presentation round (deep defense of a personal project). System design interviewers push 10x/100x/1000x scaling, fault tolerance, and idempotency.
+> **2025-2026 Trends**: Production over puzzles. Problems drawn from a fixed bank (~$1,000)** under NDA, scoped for ~3-6 hours of work and graded like a senior engineer's PR review, **"missing test coverage" is the single most-cited rejection reason**, and a design doc explaining tradeoffs is expected. AI tooling is allowed for Applied AI roles, restricted for Core Infra/Research. (3) Official candidate guide published: final loop is 4-6 hours with 4-6 people over 1-2 days; engineering criteria are explicitly "well-designed solutions, high-quality code, optimal performance, good test coverage." Loop = 2 coding + 1 system design + behavioral + hiring manager, plus a 45-min project presentation round (deep defense of a personal project). System design interviewers push 10x/100x/1000x scaling, fault tolerance, and idempotency.
 
 
 **Progressive layers reported in 2026**: *Resumable Iterator* now runs up to 6 parts (lists -> multi-file with empty files -> async/coroutines -> 2D -> 3D iterators). *CD Directory Navigation* adds `~` home-dir handling and symlink resolution with cycle detection. *GPU Credit Allocation* uses half-open intervals `[start, expiration)`, consumes soonest-expiring first (heap/queue), and must answer balance queries at an arbitrary timestamp.
@@ -494,3 +494,254 @@ Segment tree / BIT problems are a Google-distinctive category rarely seen at oth
 | 10 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements) | Medium | ML preprocessing |
 | 11 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii) | Medium | Dependency resolution |
 | 12 | [Decode String](https://leetcode.com/problems/decode-string) | Medium | String processing |
+
+## Anthropic
+
+> **2025-2026 Trends**: CodeSignal OA (90 min) then a 4-6 hour onsite with 4-6 rounds. Python expected. Live rounds moved to **CodeSignal** (replacing Replit), screen-share via Google Meet, and code must actually run. **Split AI policy**: AI tools are strictly prohibited in all live interviews (candidates have been dropped for AI use), but **explicitly permitted on the performance take-home**. Google/Stack Overflow are allowed in live coding. Anthropic reportedly uses LLMs to analyze OA submissions for test-gaming patterns.
+>
+> **The performance take-home has been redesigned three times because Claude kept beating it** (Anthropic engineering blog + TechCrunch, Jan 2026): V1 (2024) was a 4-hour simulated-accelerator optimization (multicore, SIMD, VLIW); V2 (mid-2025) was cut to 2 hours after Claude Opus 4 outperformed most humans; V3 (late 2025) is a fully redesigned Zachtronics-puzzle-style constrained instruction set where you minimize instruction count with **no built-in debugging tools, building your own tooling is part of the test**. In Anthropic's words, "we no longer had a way to distinguish between the output of our top candidates and our most capable model." The original is open-sourced at [anthropics/original_performance_takehome](https://github.com/anthropics/original_performance_takehome).
+>
+> **Transparent question bank**: recruiters tell you which prompt family you'll get days before the round; the live-coding bank is only ~6 questions. Scheduling emails describe "a pure programming problem solving interview which doesn't benefit from memorizing standard algorithms." **OA cutoff signals**: HR reportedly states 480 as the cutoff, but community reports put the realistic bar near 600. Candidates at 540-590 report not advancing, and near-perfect scores are still rejected under holistic review. **Values/Culture round (45 min)** is universal, identical across all roles and levels, and remains the #1 failure point. NOT behavioral/STAR. It evaluates holding complexity, admitting knowledge gaps, second-order reasoning, and intellectual honesty; scripted STAR stories are the top failure mode, and measured skepticism about the mission scores better than performed enthusiasm. Prep material: Core Views on AI Safety + the Responsible Scaling Policy.
+
+### Anthropic LeetCode Practice (Mapped to Focus Areas)
+
+| No. | Question | Difficulty | Category |
+| --- | -------- | ---------- | -------- |
+| 1 | [LRU Cache](https://leetcode.com/problems/lru-cache) | Medium | Design |
+| 2 | [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded) | Medium | Concurrency / BFS |
+| 3 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree) | Medium | Trie / NLP |
+| 4 | [Word Break](https://leetcode.com/problems/word-break) | Medium | DP / Strings |
+| 5 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter) | Medium | Design |
+| 6 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store) | Medium | Design / Binary Search |
+| 7 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree) | Hard | Trees / Design |
+| 8 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists) | Hard | Heap / Distributed |
+| 9 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii) | Medium | Graph / Topological Sort |
+| 10 | [Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium | Graph / DFS |
+| 11 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self) (phone screen; O(n log n) required) | Hard | Merge Sort / BIT |
+
+Anthropic's design rounds treat the safety/moderation layer as a first-class requirement and focus on AI/ML workloads rather than "design Twitter."
+
+## Palantir
+
+> **2025-2026 Trends**: Unique 4-round format (you get 3 of 4: Decomposition, System Design, Re-engineering/Debugging, Coding). Each round includes 20 min behavioral. Loop: screen -> 60-min CodePair -> 3x60-min onsite -> hiring manager. **The OA is a 3-part practical HackerRank (~90 min): one coding + one SQL + one REST API/pagination task**: not pure DSA. Graph/BFS/DFS and hash map problems dominate, wrapped in narrative prompts that require extracting requirements before coding. **AI use is strictly prohibited in interviews**: a notable divergence from the industry's 2026 drift toward AI-assisted rounds. **New in 2026**: decomposition prompts have gone AI/LLM-flavored (LLM claim summarization for an insurer, a shipment-rerouting agent, retailer demand forecasting) alongside the classics. Design rounds treat correctness and fault tolerance as first-class constraints, data integrity, access control, auditability, failure modes. **Meritocracy Fellowship** (launched 2025) is an alternative pipeline for high-school grads (SAT >= 1460 / ACT >= 33, $5,400/mo, 4 months); 22 were hired from 500+ applicants, and successful fellows interview for full-time roles without a degree.
+
+### Palantir Coding Problems
+
+| No. | Question | Difficulty | Category |
+| --- | -------- | ---------- | -------- |
+| 1 | [Merge Intervals](https://leetcode.com/problems/merge-intervals) | Medium | Intervals / Sorting |
+| 2 | [Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium | Graph / DFS / BFS |
+| 3 | [LRU Cache](https://leetcode.com/problems/lru-cache) | Medium | Design / Hash Map |
+| 4 | [Course Schedule](https://leetcode.com/problems/course-schedule) | Medium | Graph / Topological Sort |
+| 5 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii) | Medium | Graph / Topological Sort |
+| 6 | [All Ancestors of a Node in DAG](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph) | Medium | Graph / DFS |
+| 7 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists) | Hard | Heap / Linked List |
+| 8 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching) | Hard | DP / String |
+| 9 | [Subdomain Visit Count](https://leetcode.com/problems/subdomain-visit-count) | Medium | Hash Map / String |Pointers |
+| 10 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island) | Medium | Graph / DFS |
+| 11 | [Flood Fill](https://leetcode.com/problems/flood-fill) | Easy | BFS / DFS |
+| 12 | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops) | Medium | Shortest Path |
+| 13 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) | Easy | Array |
+
+### Palantir Unique Rounds
+
+**Decomposition Interview** (Non-coding, most distinctive round):
+- Framework: Goal -> Inputs/Outputs -> Assumptions -> Subproblems -> Tests -> Integration
+- *AI-flavored prompts (new in 2026)*: an insurer wants LLM-powered claim summarization; a logistics firm wants an agent to reroute shipments; unify bank fraud detection across legacy systems; an enterprise platform for 500 data sources; retailer demand forecasting; reduce 911 response times
+- *Classics still rotating*: "How would you design technology to help elderly people with poor vision cook safely?"; chess game; parking garage management; social graph with friend recommendations; infection-spread tracking; taxi dispatch; hospital patient records; smart city traffic management
+
+**Re-engineering (Debugging) Interview**:
+- Debug 500-1000 lines of pre-written code with intentional bugs and red herrings
+- Examples: HashMap with incorrect if-else logic, contact tracing double-counting bug
+
+**FDSE vs SWE differences**: FDSE interviews weight decomposition higher with Easy-Medium coding; SWE interviews have Medium-Hard coding with infrastructure-scale system design
+
+---
+
+## Tesla
+
+> **2025-2026 Trends**: Greedy + string manipulation heavily tested (Reorganize String is most-asked). Prefix sum / subarray problems common. For embedded/firmware roles, expect C/C++ and real-time constraints. OA is ~85-90 min, 3 problems on Codility. **New in 2026**: take-homes have been **replaced by a ~60-min practical CoderPad screen** for many teams, and Tesla is shifting back toward in-person onsites for stronger live signal. **Googling and documentation are allowed during coding rounds; LLM/Copilot use is at interviewer discretion**: evaluators explicitly watch whether you critically review code rather than paste blindly. Questions are team-tied rather than generic LeetCode: Autopilot/firmware/energy loops add domain exercises (sensor data parsing, state machines, scheduling). Autopilot loops of up to 7 rounds reported. Difficulty across ~47 tracked problems: 8 Easy / 33 Medium / 6 Hard, with arrays+sorting the highest volume.
+
+### Tesla Algorithms
+
+| No. | Question | Difficulty |
+| --- | -------- | ---------- |
+| 1 | [Reorganize String](https://leetcode.com/problems/reorganize-string) | Medium |
+| 2 | [Two Sum](https://leetcode.com/problems/two-sum) | Easy |
+| 3 | [Group Anagrams](https://leetcode.com/problems/group-anagrams) | Medium |
+| 4 | [3Sum](https://leetcode.com/problems/3sum) | Medium |
+| 5 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | Medium |
+| 6 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k) | Medium |
+| 7 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) | Medium |
+| 8 | [Minimum Area Rectangle](https://leetcode.com/problems/minimum-area-rectangle) | Medium |
+| 9 | [Find Peak Element](https://leetcode.com/problems/find-peak-element) | Medium |
+| 10 | [Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation) | Easy |
+| 11 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | Easy |
+| 12 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words) | Medium |
+| 13 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array) | Medium |
+| 14 | [Task Scheduler](https://leetcode.com/problems/task-scheduler) | Medium |
+| 15 | [Sort Colors](https://leetcode.com/problems/sort-colors) | Medium |
+| 16 | [Rotate Image](https://leetcode.com/problems/rotate-image) | Medium |
+| 17 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii) | Medium |
+| 18 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index) | Easy |
+
+# Databricks
+
+> **2025-2026 Trends**: OA is 4 problems in 70 minutes on CodeSignal (2 easy, 2 medium), webcam-proctored, single browser, scored on a scale "resembling a credit score, up to 850" (~30% pass rate). Onsite is **fully virtual in 2026** and standardized: 2 algorithm rounds + a **dedicated 60-min concurrency/multithreading round** (unique among tech companies, "most companies wave at the topic; Databricks makes it an entire hour") + system design + behavioral; senior/staff sometimes get a second system design round. **Small question pool, deep follow-up variations**: candidates report the same core problems (SnapshotSet, Lazy Array, House Robber variants, Tic-Tac-Toe) recycled with escalating twists, including "now distribute this with Spark" follow-ups. ML and platform engineering interviews are increasingly intertwined post-acquisitions, feature-store and Spark-internals prompts now appear in generalist SWE loops. ~25% of candidates pivot teams post-onsite.
+
+### Databricks Algorithms and Design
+
+| No. | Question | Difficulty |
+| --- | -------- | ---------- |
+| 1 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days) | Medium |
+| 2 | [Word Break](https://leetcode.com/problems/word-break) | Medium |
+| 3 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges) | Medium |
+| 4 | [All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree) | Medium |
+| 5 | [Decode String](https://leetcode.com/problems/decode-string) | Medium |
+| 6 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin) | Medium |
+| 7 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision) | Medium |
+| 8 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter) | Medium |
+| 9 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store) | Medium |
+| 10 | [Snapshot Array](https://leetcode.com/problems/snapshot-array) | Medium |
+| 11 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string) | Medium |
+| 12 | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops) | Medium |
+| 13 | [IP to CIDR](https://leetcode.com/problems/ip-to-cidr) | Medium |
+| 14 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island) | Medium |
+| 15 | [House Robber II](https://leetcode.com/problems/house-robber-ii) | Medium |
+| 16 | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe) (variable board size + configurable win condition) | Medium |
+| 17 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words) (in a stream, under memory constraints) | Medium |
+| 18 | [LRU Cache](https://leetcode.com/problems/lru-cache) (with hit-count tracking + thread safety) | Medium |
+| 19 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator) | Medium |
+
+## NVIDIA
+
+> **2025-2026 Trends**: Most strategically central tech company in 2026 due to AI infrastructure dominance. Emphasizes performance awareness over generalist coding. After solving baseline, expect follow-ups: "How does this behave under memory pressure? What's the cache miss profile? How would you parallelize across 10,000 threads?" C++ essential for systems/GPU roles; Python acceptable for ML/infra. Difficulty: 8 Easy, 29 Medium, 9 Hard across 46 tracked problems. **New in 2026**: loops are team-scoped with genuine-medium coding and a **"build from scratch" preference: interviewers prefer you avoid built-in library functions**. Recruiter screen -> 1-2 phone screens -> 4-6 interview virtual onsite over 6-8 weeks. Candidates report bespoke variants over tagged problems ("brushing up on NVIDIA classification problems on LeetCode wasn't particularly helpful"). Classic problems now get systems extensions. LRU Cache follow-ups ask you to make it thread-safe with a read-write lock (and why RW lock vs mutex), or relate it to GPU memory caching semantics. **AI-infra system design is the new senior bar**: batch inference APIs on GPU clusters, tensor+pipeline parallelism across H100s, and naming TensorRT-LLM/vLLM tradeoffs. New grad rounds increasingly mix one PyTorch problem + one LC medium.
+
+### NVIDIA Algorithms
+
+| No. | Question | Difficulty |
+| --- | -------- | ---------- |
+| 1 | [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended) | Medium |
+| 2 | [Min Stack](https://leetcode.com/problems/min-stack) | Medium |
+| 3 | [Clone Graph](https://leetcode.com/problems/clone-graph) | Medium |
+| 4 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin) | Medium |
+| 5 | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight) | Medium |
+| 6 | [Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium |
+| 7 | [Rotate Image](https://leetcode.com/problems/rotate-image) | Medium |
+| 8 | [Word Break](https://leetcode.com/problems/word-break) | Medium |
+| 9 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix) | Medium |
+| 10 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix) | Hard |
+| 11 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island) | Hard |
+| 12 | [Special Binary String](https://leetcode.com/problems/special-binary-string) | Hard |
+| 13 | [LRU Cache](https://leetcode.com/problems/lru-cache) (thread-safe RW-lock extension) | Medium |
+| 14 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) | Medium |
+| 15 | [Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree) | Medium |
+| 16 | [Group Anagrams](https://leetcode.com/problems/group-anagrams) | Medium |
+| 17 | [Two Sum](https://leetcode.com/problems/two-sum) | Easy |
+| 18 | [Course Schedule](https://leetcode.com/problems/course-schedule) | Medium |
+| 19 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) | Medium |
+| 20 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) | Easy |
+
+## Uber
+
+> **2025-2026 Trends**: Interviews reflect product domain -- routing, dispatch, surge pricing map to graph traversal, streaming aggregation, sliding-window patterns. OA: 4 problems in 70-90 minutes on CodeSignal (easy/medium arrays + harder graph/DP), followed by a 4-6 round onsite. Code readability explicitly evaluated. L5A (Senior): 5 rounds total with elimination Round 0 (LeetCode Medium). Difficulty: 7% Easy, 73% Medium, 20% Hard. **New in 2026**: **machine-coding / LLD rounds are the differentiator at senior levels**: coding is the primary gate while system-design quality decides leveling (L5a/L5b/Senior/Staff). Original non-LeetCode problems appear in "Hack2Hire" assessments. Questions cluster into four families: graphs/BFS-DFS, sliding window/two pointers, heaps/streaming, and cache/design, with domain-flavored twists (quadtrees for geo points, rate limiters, autocomplete) rather than pure textbook problems. Frequent themes: Uber Eats cart pricing, geo heatmaps, surge, restaurant recommendation. No evidence Uber allows AI tools in interviews as of mid-2026.
+
+### Uber Algorithms
+
+| No. | Question | Difficulty |
+| --- | -------- | ---------- |
+| 1 | [Maximize Amount After Two Days of Conversions](https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions) | Medium |
+| 2 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter) | Medium |
+| 3 | [Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium |
+| 4 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix) | Medium |
+| 5 | [Word Search](https://leetcode.com/problems/word-search) | Medium |
+| 6 | [LRU Cache](https://leetcode.com/problems/lru-cache) | Medium |
+| 7 | [Evaluate Division](https://leetcode.com/problems/evaluate-division) | Medium |
+| 8 | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight) | Medium |
+| 9 | [Merge Intervals](https://leetcode.com/problems/merge-intervals) | Medium |
+| 10 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii) | Medium |
+| 11 | [Longest Subarray With Absolute Diff <= Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) | Medium |
+| 12 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii) | Medium |
+| 13 | [Group Anagrams](https://leetcode.com/problems/group-anagrams) | Medium |
+
+## Airbnb
+
+> **2025-2026 Trends**: **No pseudocode, code must actually run and pass test cases** in the 45-60 min CoderPad screen (or HackerRank/CodeSignal OA). This remains Airbnb's most distinctive coding-round rule. **Hardest difficulty skew among peers**: ~33% of reported problems are Hard, with heavy DP and simulation emphasis. Problems arrive dressed as product features, interval merging framed as overlapping reservation windows, tree path sums with depth constraints. **Core values and cross-functional rounds are true gates**, not chats: dedicated rounds on Belonging / "Be a Host", then hiring-committee review. **Senior loops swap a coding round for a code review round**: at G9 and above the second coding interview was replaced by a dedicated code review, so the onsite is coding, code review, system design, technical deep dive, behavioral. You are graded on catching subtle correctness and security defects and on the feedback you give, not on style nits. No evidence Airbnb permits AI tools in interviews.
+
+### Airbnb Algorithms
+
+| No. | Question | Difficulty | Category |
+| --- | -------- | ---------- | -------- |
+| 1 | [Flatten 2D Vector](https://leetcode.com/problems/flatten-2d-vector) | Medium | Iterator Design |
+| 2 | [Combination Sum](https://leetcode.com/problems/combination-sum) | Medium | Backtracking |
+| 3 | [Smallest Common Region](https://leetcode.com/problems/smallest-common-region) | Medium | Hash / LCA |
+| 4 | [Maximum Candies You Can Get from Boxes](https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes) | Hard | BFS |
+| 5 | [Pour Water](https://leetcode.com/problems/pour-water) | Medium | Simulation (Airbnb signature) |
+| 6 | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops) | Medium | BFS / Bellman-Ford Topological |
+| 7 | [IP to CIDR](https://leetcode.com/problems/ip-to-cidr) | Medium | Bit Manipulation |
+| 8 | [Simple Bank System](https://leetcode.com/problems/simple-bank-system) | Medium | Design / Simulation |
+| 9 | [Mini Parser](https://leetcode.com/problems/mini-parser) | Medium | Stack Parsing |
+
+
+**Custom problems**: Boxes and Candies (custom optimization, paired with Alien Dictionary in a phone round); reservation-window merging (Merge Intervals reskinned as overlapping guest bookings); binary tree path sums with a depth constraint.
+
+## DoorDash
+
+> **2025-2026 Trends**: DoorDash **publicly announced it is rebuilding its engineering interviews around AI**. The new format is a **60-min AI-assisted working session on your own machine/IDE**: Cursor, Claude Code, or Codex free tiers suffice, and all agent features are allowed. You're evaluated on pragmatic tradeoffs, turning ambiguity into a plan, minimal-repro validation, and narrating your reasoning. **The AI policy is transitional**: traditional algorithm rounds still ban AI use, while the new working-session round mandates it. 2026 loop: **CodeCraft** round (build a small business module from requirements, then extend as requirements are added), a dedicated **Debugging** round (find subtle bugs in an unfamiliar codebase, uninitialized maps, null pointers), System Design (60-75 min, logistics-centric), and Behavioral. Hiring has been decentralized since ~2025, so round mix varies by team.
+
+### DoorDash Algorithms
+
+| No. | Question | Difficulty | Category |
+| --- | -------- | ---------- | -------- |
+| 1 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates) | Medium | Multi-source BFS (DashMart framing) |
+| 2 | [Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings) | Hard | Multi-source BFS |
+| 3 | [01 Matrix](https://leetcode.com/problems/01-matrix) | Medium | Multi-source BFS |
+| 4 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix) | Hard | DFS + Memo |
+| 5 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas) | Medium | Binary Search on Answer |
+| 6 | [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system) | Medium | Trie / Sorting (store search) |
+| 7 | [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements) | Medium | Binary Search + Two Pointers |
+| 8 | [Ways to Make a Fair Array](https://leetcode.com/problems/ways-to-make-a-fair-array) | Medium | Prefix Sums |
+| 9 | [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal) | Easy | String (phone-screen warmup) |
+| 10 | [Design HashMap](https://leetcode.com/problems/design-hashmap) | Easy | Design |
+| 11 | [Jump Game](https://leetcode.com/problems/jump-game) | Medium | Greedy / DP |
+| 12 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | Easy | String |
+
+## Topic-wise Questions
+
+### Array Manipulation
+
+| No. | Question | Difficulty | Companies |
+| --- | -------- | ---------- | --------- |
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum) | Easy | All |
+| 2 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water) | Medium | Google, Amazon |
+| 3 | [3Sum](https://leetcode.com/problems/3sum) | Medium | All |
+| 4 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) | Medium | Meta, Apple, Amazon |
+| 5 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k) | Medium | Meta, Amazon |
+| 6 | [Merge Intervals](https://leetcode.com/problems/merge-intervals) | Medium | All |
+| 7 | [Next Permutation](https://leetcode.com/problems/next-permutation) | Medium | Meta, Microsoft, Cerebras |
+| 8 | [Minimum Area Rectangle](https://leetcode.com/problems/minimum-area-rectangle) | Medium | Google, Tesla, Waymo |
+| 9 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum) | Medium | Meta, ByteDance, Cerebras |
+
+### Trees and Graphs
+
+| No. | Question | Difficulty | Companies |
+| --- | -------- | ---------- | --------- |
+| 1 | [Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium | All |
+| 2 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii) | Medium | Google, Amazon, Netflix, Tesla, Uber |
+| 3 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree) | Medium | Meta, Amazon, Apple, Scale AI |
+| 4 | [Accounts Merge](https://leetcode.com/problems/accounts-merge) | Medium | Meta, Google |
+| 5 | [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort) | Medium | Google, Waymo |
+| 6 | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops) | Medium | Microsoft, Databricks, Palantir, Airbnb |
+| 7 | [Maximize Amount After Two Days of Conversions](https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions) | Medium | Uber, ByteDance, Cerebras |
+| 8 | [Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree) | Medium | LinkedIn, Google, Cerebras |
+
+### Dynamic Programming
+
+| No. | Question | Difficulty | Companies |
+| --- | -------- | ---------- | --------- |
+| 1 | [Word Break](https://leetcode.com/problems/word-break) | Medium | Meta, Amazon, Apple |
+| 2 | [Coin Change](https://leetcode.com/problems/coin-change) | Medium | Google, Amazon |
+| 3 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) | Easy | Meta, Amazon, Apple |
+| 4 | [Edit Distance](https://leetcode.com/problems/edit-distance) | Medium | Google, Netflix, LinkedIn |
+| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) | Medium | All |
+| 6 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence) | Medium | Google, Tesla, Palantir, Apple |
