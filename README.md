@@ -52,17 +52,12 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 | 10. | [Anthropic](#anthropic) |
 | 11. | [Palantir](#palantir) |
 | 12. | [Databricks](#databricks) |
-| 13. | [Stripe](#stripe) |
-| 14. | [NVIDIA](#nvidia) |
-| 15. | [Uber](#uber) |
-| 16. | [ByteDance / TikTok](#bytedance--tiktok) |
-| 17. | [Airbnb](#airbnb) |
-| 18. | [DoorDash](#doordash) |
-| 19. | [Tesla](#tesla) |
-| 20. | [Flipkart](#flipkart) |
-| 21. | [Anduril](./FAANG-Recent-Questions.md#anduril) |
-| 22. | [Figma](./FAANG-Recent-Questions.md#figma) |
-| 23. | [Ramp](./FAANG-Recent-Questions.md#ramp) |
+| 13. | [NVIDIA](#nvidia) |
+| 14. | [Uber](#uber) |
+| 15. | [Airbnb](#airbnb) |
+| 16. | [DoorDash](#doordash) |
+| 17. | [Tesla](#tesla) |
+| 18. | [Flipkart](#flipkart) |
 
 ## Quick Start Guide
 
