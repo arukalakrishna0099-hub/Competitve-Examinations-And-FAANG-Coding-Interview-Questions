@@ -930,3 +930,16 @@ Greedy and string manipulation are heavily tested (Reorganize String is most-ask
 | 1 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | Medium | Linked List / Math |
 
 </details>
+---
+
+## About This Repository
+
+This repository covers **1,470+ problem listings across 44 companies** (365 unique LeetCode problems, plus 100+ company-specific custom problems that never appear on LeetCode), organized by company and topic, spanning FAANG/MAANG+, frontier AI labs (OpenAI, Anthropic, DeepMind, xAI, Mistral), and AI-first companies (Perplexity, Scale AI, Cursor, Cohere, Waymo, Sierra, Glean). Includes NeetCode 150, Blind 75, system design guides, and ML/AI interview resources.
+
+Every LeetCode link is validated against LeetCode's live problem list.
+
+**[Latest FAANG/MAANG+ Questions](FAANG-Recent-Questions.md)** - Company-by-company breakdown with 2026 process changes and custom (non-LeetCode) problem banks.
+
+**[AI Labs & AI Companies Guide](AI-Companies-Interview-Questions.md)** - 20 AI labs and AI-first companies: interview processes, custom problems, ML coding, and system design.
+
+**[Complete System Design Interview Guide](SYSTEM_DESIGN_INTERVIEW.md)** - 25 system design problems with complexity ratings and company tags.
