@@ -57,7 +57,6 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 | 15. | [Airbnb](#airbnb) |
 | 16. | [DoorDash](#doordash) |
 | 17. | [Tesla](#tesla) |
-| 18. | [Flipkart](#flipkart) |
 
 ## Quick Start Guide
 
