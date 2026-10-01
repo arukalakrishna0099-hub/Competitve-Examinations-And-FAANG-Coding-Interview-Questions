@@ -117,7 +117,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## Google
 
 <details>
-<summary>View 45 Problems (2025-2026 Most Frequent)</summary>
+<summary>View 45 Problems ( Most Frequent)</summary>
 
 **2026 changes**: an AI-assisted "code comprehension" round is piloting, in which you debug and optimize an existing codebase with **Gemini available**; interviewers score AI fluency (prompting, output validation, debugging AI output). An **in-person round has been reinstated** to curb AI-assisted cheating. The Googleyness round is now part-technical. Roughly 19% of reported problems are Hard. Segment tree / BIT problems are a Google-distinctive category.
 
@@ -176,7 +176,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## Meta (Facebook)
 
 <details>
-<summary>View 45 Problems (2025-2026 Most Frequent)</summary>
+<summary>View 45 Problems (Most Frequent)</summary>
 
 **2026 changes**: The **AI-enabled coding round** is rolling out to all SWE roles, 60 min in a 3-panel CoderPad (file explorer, editor, AI chat; GPT-5, Claude Sonnet, Gemini, Llama 4 available; AI reads files but cannot edit). Three phases: fix a bug -> build a 120+ line feature -> optimize for larger datasets. Scored on problem solving, code quality, **verification**, and communication. For E4-E5 it randomly replaces one of the two coding rounds; at E6 it also replaces one of two, so a traditional CoderPad round normally remains. Behavioral weight increased, it can single-handedly downlevel E5 to E4. Candidates increasingly get *variants* of tagged problems.
 
@@ -235,7 +235,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## Amazon
 
 <details>
-<summary>View 45 Problems (2025-2026 Most Frequent)</summary>
+<summary>View 45 Problems ( Most Frequent)</summary>
 
 **2026 changes**: HackerRank OA = 2 coding problems (~70 min) + Work Simulation (~20 min) + Work Style Assessment; the SDE II OA adds a 20-min System Design scenario. ~75-80% of OA problems are Medium, wrapped in Amazon-themed framing (servers, warehouses, parcels). Onsite is ~50/50 coding vs Leadership Principles in every round, plus Bar Raiser. Rising: Dijkstra/weighted-shortest-path problems. **No AI-assisted round**: Amazon rotates custom OA sets aggressively instead, so pattern prep beats memorization.
 
@@ -294,7 +294,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## Apple
 
 <details>
-<summary>View 30 Problems (2025-2026 Most Frequent)</summary>
+<summary>View 30 Problems ( Most Frequent)</summary>
 
 **Still radically team-dependent. No unified loop**: some teams ask standard LC mediums, embedded/hardware teams ask C/C++ memory questions, services teams ask API design or debug-broken-code. **2026**: design-style coding questions are disproportionately common; loops for experienced hires run 8-9 rounds over several weeks. **No AI-assisted rounds reported**: human-only interviews graded on correctness, memory behavior, and boundary handling.
 
@@ -338,7 +338,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## Netflix
 
 <details>
-<summary>View 22 Problems (2025-2026 Most Frequent)</summary>
+<summary>View 22 Problems ( Most Frequent)</summary>
 
 **Biggest 2026 change: formal engineering levels.** Netflix moved from a single "Senior Engineer" rung to an explicit multi-band ladder (~E1/L4-E7). The same coding answer is now scored against your target level, so an answer that passes at E4 can fail at E6 for being "too tactical." Loops are decentralized and team-owned; the hiring manager is involved from the first screen. Coding favors practical mediums re-skinned with Netflix domain (shows, playlists, watch history). The culture/Keeper Test round is mandatory in every loop.
 
@@ -374,7 +374,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## Microsoft
 
 <details>
-<summary>View 30 Problems (2025-2026 Most Frequent)</summary>
+<summary>View 30 Problems ( Most Frequent)</summary>
 
 **2026 changes**: Process compressed. OA (2 mediums) then 4 virtual onsite rounds usually on a single day; SDE2 loops = 2-3 DSA + LLD + HLD + hiring manager. The **"As Appropriate" (AA) round** is formalized and run by Principal EMs; ~85% who reach it get offers, but it retains veto power. Behavioral "growth mindset" scoring is level-banded. **AI-assisted rounds are org-specific, not universal**: mostly CoreAI/Copilot teams; ask your recruiter.
 
@@ -420,7 +420,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## LinkedIn
 
 <details>
-<summary>View 30 Problems (2025-2026 Most Frequent)</summary>
+<summary>View 30 Problems ( Most Frequent)</summary>
 
 **2026 changes**: The **AI-enabled coding round is now standard**: one of two coding rounds, on CoderPad with an AI chat panel (Claude/Opus tiers). The AI **cannot edit code**: you paste and verify. Graded on a **4-point scale where 3 passes**, relative to other candidates. **The follow-ups are the real bar**: after working code, questioning pivots to concurrency/thread safety, scaling, malformed input, and production readiness.
 
@@ -464,7 +464,7 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 ## OpenAI
 
 <details>
-<summary>View Problems (2025-2026 -- Production-Oriented)</summary>
+<summary>View Problems ( -- Production-Oriented)</summary>
 
 OpenAI interviews focus on practical engineering over LeetCode puzzles. Problems are drawn from a bank of ~8 core challenges with progressive difficulty layers, and the bank churns. Python is strongly recommended.
 
