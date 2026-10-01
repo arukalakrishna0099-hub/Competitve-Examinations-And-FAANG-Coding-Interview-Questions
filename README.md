@@ -67,7 +67,6 @@ Full breakdown in [FAANG-Recent-Questions.md](./FAANG-Recent-Questions.md#the-si
 **Intermediate Track** (1-6 months)
 - Complete [NeetCode 150](./NeetCode-150.md) for comprehensive coverage
 - Focus on [Recent FAANG/MAANG Questions](./FAANG-Recent-Questions.md)
-- Start [System Design](./SYSTEM_DESIGN_INTERVIEW.md) preparation
 ## FAANG Must Do Problems
 
 <details>
