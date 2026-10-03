@@ -16,6 +16,9 @@
 - [Blind 75 - The Ultimate Interview Preparation List](./Blind-75.md)
 - [Top 75 LeetCode Questions to Crack The Coding Interviews](./TopLeetCodeProblems.md)
 
+**Company-Specific Questions**
+- [Latest Interview Questions at FAANG/MAANG+ Companies](./FAANG-Recent-Questions.md)
+
 ## What Changed in 2026
 
 The interview format shifted more this past year than in the previous five. The headline: **AI-assisted rounds went mainstream**, and where AI is allowed the rubric moved to *verification*: test before you trust the output, and be able to explain it.
