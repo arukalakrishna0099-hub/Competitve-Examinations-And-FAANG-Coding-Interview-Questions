@@ -2,9 +2,9 @@
 
 > A comprehensive list of the most recently asked coding interview questions at top tech companies (2025-2026). Questions are organized by company and topic to help you prepare effectively.
 >
-> **Looking for AI labs?** DeepMind, xAI, Mistral, Perplexity, Scale AI, Cohere, Cursor, Waymo, Sierra, Glean and more live in the companion [AI Labs & AI Companies guide](./AI-Companies-Interview-Questions.md).
+> **Looking for AI labs?** DeepMind, xAI, Mistral, Perplexity, Scale AI, Cohere, Cursor, Waymo, Sierra, Glean and more live in the companion.
 
-> **More from this repo**: [All guides](./README.md) | [AI labs](./AI-Companies-Interview-Questions.md)   | [Blind 75](./Blind-75.md) | [NeetCode 150](./NeetCode-150.md)
+> **More from this repo**: [All guides](./README.md) | [Blind 75](./Blind-75.md) | [NeetCode 150](./NeetCode-150.md)
 
 ## The Single Biggest Change in 2026: AI-Assisted Rounds
 
