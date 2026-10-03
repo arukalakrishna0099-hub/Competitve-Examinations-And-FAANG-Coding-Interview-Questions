@@ -1,5 +1,5 @@
 
-# Competitive Examinations & FAANG / MAANG+ Coding Interview Questions
+# Competitive Examinations & FAANG / MAANG + Technical/Coding Interview Questions
 
 <div align="center">
 
