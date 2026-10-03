@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <p><strong>A curated collection of coding, system design, and ML interview questions from top tech companies.</strong><br/>Continuously updated with 2025-2026 interview questions across 44 companies: FAANG, frontier AI labs, and AI-first startups.</p>
+  <p><strong>A curated collection of coding, system design, and ML interview questions from top tech companies.</strong><br/>Continuously updated with 2025-2026 interview questions across 44 companies: FAANG, frontier AI labs.</p>
 
 </div>
 
