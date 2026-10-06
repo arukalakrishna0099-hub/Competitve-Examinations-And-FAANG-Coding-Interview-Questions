@@ -1,0 +1,242 @@
+TCS NQT PROGRAMMING QUESTIONS
+
+TABLE OF CONTENTS
+SECTION 1 — EASY
+	•	Question 1 — Strings — Paper 8 SECTION 2 — BASIC-MEDIUM
+	•	Question 2 — Arrays / Sliding Window — Paper 7
+	•	Question 1 — Arrays / Sorting / Median — Paper 10 SECTION 3 — MEDIUM
+	•	Question 2 — Combinatorics / Arrays — Paper 9
+SECTION 1 — EASY
+Strings
+Question 1	|	Exam: TCS NQT	|  Difficulty: Easy |
+Question 1-
+Jack and Jill are playing string game. Jack has given Jill two strings A and B.
+Jill has to derive a string C from A,by deleting elements from string A, such that string C does not contain any element of string B.
+Jill needs help to do this task. She wants a program to do this as she is lazy. Given strings A and B as input ,give string C as Output.
+Example 1:
+
+	•	Input:
+tiger -> input string A ti	-> input string B
+	•	Output:
+ger	-> Output string C
+	•	Explanation:
+After removing “t” and “i” from “tiger”, we are left with “ger”. So, the answer is “ger”.
+Example 2:
+
+	•	Input:
+processed -> input string A esd	-> input string B
+	•	Output:
+proc	-> Output string C
+	•	Explanation:
+After removing “e” “s” and “d” from “processed”, we are left with “proc”. So, the answer is “proc”.
+Example 3:
+
+	•	Input:
+talent -> input string A tens	-> input string B
+	•	Output:
+al	-> Output string C
+Explanation:
+After removing “t” “e” and “n” from “talent”, we are left with “al”.
+So, the answer is “al”.
+
+SECTION 2 — BASIC-MEDIUM
+Arrays / Sliding Window
+Question 2	|	Exam: TCS NQT	| Difficulty: Basic-Medium |
+Question 2
+Bob is going to bet today on horse riding. There are N horses listed in a sequence of 1 to N.
+The probability of winning of each horse is different so the prices for making a bet on the horses are not the same. There is no limit on the number of horses on which he can bet, but he thinks that if he bets on a continuous sequence of horses then he has a better chance to win. Bob will get K units of money if any horse on which he bets will win. But as the award is only K units so he wants to put money less than K. Bob wants to bet on as many horses as he can. As you are his best friend, he reached out to you for help, can you please find the length of the maximum
+continuous sequence of horses on which Bob can make a bet, and remember he will invest money less than K units. If there are more than one possible combinations, Bob will bet randomly on any one of them.
+Given the number of horses(N), reward money(K), and price of betting on N horses in order.
+Hint: For each starting index of a horse, its end index in sequences will be equal to or greater than the end index of the previous starting index.
+Example 1:
+
+	•	Input:
+90 100 -> N = 10, K=100
+30 40 50 20 20 10 90 10 10 10 -> Price to make bet on each horse in order
+	•	Output:
+3
+	•	Explanation:
+There are 10 horses, and the reward money is 100. So, Bob will put money less than 100. There are two possible o sequences of length three whose total money for betting is less than 100, i.e. [50 20 20] (sum is 90) and [10 10 10] (sum is 30). Bob will choose randomly one sequence from these two. As none of the other sequences with length greater than 3 will have a price less than 100 so the answer will be 3.
+Example 2:
+
+	•	Input:
+10 100 -> N = 10, K=100
+10 90 80 20 90 60 40 60 70 75 -> Price to make bet on each horse in order
+
+	•	Output:
+1
+
+	•	Explanation:
+There are no two consecutive horses for which the sum of price is less than 100. So, Bob
+
+will choose randomly any one horse. And the max length of the sequence will be 1.
+Constraints:
+
+	•	2<=N<=105
+	•	1<= K<=109
+	•	1<=A1, A3… AN<=109
+The Input format for testing:
+The candidate has to write the code to accept 2 inputs.
+
+	•	First Input: It will contain two integer N (number of horses) and K (reward money)
+	•	Second Input: It will contain N integers, each separated
+
+Arrays / Sorting / Median
+Question 1	|	Exam: TCS NQT	|  Difficulty: Basic-Medium
+
+Question 1-
+Two parallel roads separated by a river are connected from cities A and B to an outer ring road. Both the roads have high flow of traffic throughout the day. People who want to travel from city A to city B or vice versa have to pass through the ring road which is a huge waste of time and money. In order to ease the traffic and also to make it convenient for commuters to travel from city A to city B and vice versa, construction of a bridge over the river is planned.
+The surveillance team submitted a report stating the bridge should be constructed in the following manner:
+	•	The ground or soil is stronger at certain points on the road favorable for the construction
+of the bridge.
+	•	The strong ground positions are given from the starting point of each road. Say, road
+of
+city A has strong ground at 1,4 meaning there is a strong ground at a distance of 1 unit, another strong ground point at a distance of 4 units from the starting point of the road of city A.
+Collate the strong ground positions of both the roads. Sort them in ascending order.
+Calculate the middle point or median of the combined strong ground positions. The bridge should be constructed from road A as per the middle point calculated
+Given the number of strong positions on the roads of A and B(N1 and N2 respectively), and the strong ground positions on each road, the task here is calculate the midpoint of the combined strong positions of both the roads.
+NOTE: When the strong positions are combined, the repeated positions on the different roads are dropped.
+Example 1:
+
+	•	Input:
+3 -> Value of N1 3 -> Value of N2
+{3,5,2} -> a[], Elements a[0]to a[N1-1], where each input element is separated by new line
+{1,2,3} -> b[], Elements b[0]to b[N2-1), where each input element is separated by new line
+	•	Output: 2.50
+	•	Explanation:
+From the inputs given above:
+Number of strong ground positions on road A:3 Number of strong ground positions on road B:3
+The positions of strong ground from the starting point of road A are at a distance of 3,5,2 The positions of strong ground from the starting point of road B are at a distance of 1,2,3
+
+Combining the strong ground positions of both the roads and sorting them in ascending order
+1,2,3,5
+Middle points are 2 and 3
+2+3=5
+5/2=2.5
+So, the middle point from where the bridge should be constructed is 2.5. Hence, the output is 2.50
+Example 2:
+
+	•	Input:
+	•	-> Value of N1
+	•	-> Value of N2
+{2,3} -> all, Elements a[O]to a[N1-1), where each input element is separated by new line
+{5,6,4} -> b[], Elements b[O]to b[N2-1), where each input element is separated by new line
+	•	Output: 4.00
+	•	Explanation:
+From the inputs given above:
+Number of strong ground positions on road A: 2 Number of strong ground positions on road B:3
+The positions of strong ground from the starting point of road A are at a distance of 2,3 The positions of strong ground from the starting point of road B are at a distance of 5,6,4 Combining the strong ground positions of both the roads and sorting them in ascending order:
+2,3,4,5,6 > Middle point is 4
+So, the middle point from where the bridge should be constructed is 4 Hence, the output is 4.
+
+SECTION 3 — MEDIUM
+Combinatorics / Arrays
+Question 2	|	Exam: TCS NQT	|  Difficulty: Medium	| 
+Question 2
+James has a sequence of N numbers. There is also an integer X which is a random number from other sources.
+He is allowed to perform a specific operation on this sequence X number of times. Below is the operation:
+	•	Pick exactly one element from the sequence and multiply it with -1. Your task is to find out the number of different sequences which can be formed by performing the above operation.
+If the answer is large, print the result modulo. 109 +7.
+Let us try to understand it with an example,
+N=3 X=2
+S = [1, 2, 3]
+There are 2 ways in which this operation can be performed.
+
+	•	Way 1: Either -1 should be multiplied to the same element 2 times, OR
+	•	Way 2: -1. Should be multiplied to two different elements once each.
+Way 1:
+If we multiply -1, to each element 2 times. It will become +1 (-1 *-1). We will get same sequence for each element:
+
+	•	Multiply
+-1,
+2
+times
+to
+S[1] :
+[1,
+2,
+3].
+	•	Multiply
+-1,
+2
+times
+to
+S[2] :
+[1,
+2,
+3].
+	•	Multiply
+-1,
+2
+times
+to
+S[3] :
+[1,
+2,
+3].
+So, the unique sequence is just 1 which is [1, 2, 3].
+Way 2:
+If we multiply -1, to two different elements just 1 time each. We get:
+
+	•	Multiply -1 to S[1] & S[2] : [-1, -2, 3].
+	•	Multiply -1 to S[2] & S[3] : [1, -2, -3].
+	•	Multiply -1 to S[1] & S[3] : [-1, 2, -3]. Hence, we get a total of 3 different sequences from Way 2. Total 1 + 3 = 4 different sequences.
+Hence the answer is 4.000 Example 1:
+	•	Input:
+3 1 -> Input integer, N, X
+
+{1, 2, 1} -> Input integer, S
+	•	Output:
+3 -> Output
+	•	Explanation:
+In the given scenario, we have X =1. Hence, we can have this multiplication of -1 only once. So, if we multiply -1, to different elements just 1 time. We get:
+o Multiply -1 to S[1] & S[2] : [-1, -2, 1].
+o Multiply -1 to S[2] & S[3] : [1, -2, -1].
+o Multiply -1 to S[1] & S[3] : [-1, 2, -1].
+Hence, we get a total of 3 different sequences. So, the answer is 3.
+Example 2:
+
+	•	Input:
+	•	2 -> Input integer, N, X
+{1, 2, 3} -> Input integer, S
+
+	•	Output:
+	•	-> Output
+	•	Explanation:
+There are 2 ways in which this operation can be performed
+	•	Way 1: Either – 1 should be multiplied to the same element 2 times, OR
+	•	Way 2: -1 should be multiplied by different elements once.
+As shown in the above Demo example, there will be a total of 4 different sequences which can be achieved from this.
+Hence the answer is 4.
+
+Arrays / Updates
+Question 1	|	Exam: TCS NQT	|	Difficulty: Medium	
+Question 1
+John is mathematics teacher in one of the classes of Dale’s school. The class has N students.
+Today is their yearly exam. And John is very strict on the answers.
+As per John, no one is allowed to cheat. He will find it out from the final marks of two adjacent students.
+The marks of N students are mentioned in M[ ], with index 1 to N.
+All of the students are seated one behind the other based on their roll numbers, which is from 1 to N.
+If any two adjacent (one behind the other) students have same marks, then it will be considered as cheating, and the latter student will be removed from the merit
+list. The student sitting behind is considered as cheater.
+At the next level is the process of re-evaluation, which is performed by another department. The re-evaluation can impact marks of K students. The re-evaluation will update their marks and then again, the 3 final merit list will be declared.
+The re-evaluation will be in the format of X Y. Here ‘X’ is the index of the student whose marks needs to be changed from the original value to Y. Each re-evaluation is independent, and the merit list is updated after each re-evaluation.
+After each re-evaluation the merit list is updated, where the cheater is filtered out if there is any.
+Your task is to find the maximum number of students that were part of the merit list after each re-evaluation.
+Only the final merit list is visible to all students.
+Let us try to understand it with an example.
+Consider there are total N = 5 student with the respective marks M = [1,1,2,5,2]. So, N = 5 and M = [1, 1, 2, 5, 2].
+After re-evaluation there were 2 (K = 2) students whose marks are updated. X[1] = 3 (Y)
+X[4] = 2 (Y)
+Hence in our scenario, input will look something like 52
+11252
+13
+42
+Now as per teacher’s rule, no two students should have same marks, otherwise they will all be removed from the merit list.
+Let’s consider the first re-evaluation: the marks of M[1] which is currently 1, will
+
+now be updated to 3. So, the marks will look something like = [3 1 2 5 2]. Clearly no two adjacent students have same marks, hence all the students who participated will be in the merit list. So, the answer is 5.
+So, the answer is 5 for this re-evaluation.
+In the second re-evaluation: the marks of M[4] which is currently 5, will now be updated to 2.
+So, the marks will look something like = [3 1 2 2 2]. Clearly M[3], M[4] and M[5] have all the same marks. But only the students sitting behind will be considered as a cheater. So, M[4] and M[5] will be taken out from the merit list. So, now the merit list consists of only 3 students M[1], M[2] and M[3].
+So, the answer is 3 for this re-evaluation.
